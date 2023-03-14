@@ -3,7 +3,8 @@ I didn't like how the default Razer Chroma visualizer looked, so I made my own.
 
 It's about time I uploaded this to my github. After I fixed a bug causing the visualizer to lock up after about a minute of silence, I pretty much forced myself to actually get around to this. Sorry if it's a little rough.
 
-```The Environment:
+```
+The Environment:
   Windows 10
   Razer synapse 3.0 & 2.0 (how is that even possible?)
   Voicemeeter Banana (Not immediately required if you have some sort of loopback device, but makes things much more convenient!)
