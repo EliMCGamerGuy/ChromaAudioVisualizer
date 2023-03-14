@@ -21,6 +21,6 @@ The way it looks for loopback devices is it loops through all recording devices,
 
 For the batch files to work, Anaconda has to be in you PATH and the environment has to be called ChromaVis, unless you want to edit a couple batch files. All "Anti-crash start.bat" does is infinitely loop start.bat, as sometimes, for unknown reasons, it will occasionally crash on me. I actually have it running as I type this! I actually made these batch files so that this program can be added to Windows' startup folder, starting the script when Windows starts.
 
-I've only tested this with an old Razer Deathadder Chroma, but it's supposed to support their keyboards as well. I, however, can't test this as the only LED my keyboard has is the caps lock key. If it's wanted, I can try (but probably can't test) colorizing of different devices.
+I've only tested this with an old Razer Deathadder Chroma and a newer Razer Chroma keyboard that I borrowed. If it's wanted, I can try (but probably can't test) colorizing of different devices.
 
 Hope you can get it working! Where there's a will, there's a way!
