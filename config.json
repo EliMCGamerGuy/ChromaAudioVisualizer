@@ -1,0 +1,12 @@
+{
+    "chroma": {
+      "developerName": "EliMCGamerGuy",
+      "developerContact": "e.varmette1@gmail.com",
+      "category": "application",
+      "supportedDevices": ["keyboard", "mouse", "mousepad", "keypad", "headset", "chromalink"],
+      "description": "I didn't like how the default Chroma visualizer looked, so I made my own.",
+      "title": "ChromaAudio"
+    },
+    "keys": {},
+    "misc": {}
+  }
