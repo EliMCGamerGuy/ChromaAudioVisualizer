@@ -1,5 +1,6 @@
 echo off
 cls
+call conda.bat activate ChromaVis
 :anticrash
-call start.bat
+python ChromaAudioVisualizer.py
 goto anticrash

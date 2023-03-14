@@ -19,7 +19,7 @@ class MySketch(Sketch):
 
     def setup(self): #tuning controls
         self.reduction = 200
-        self.reduceTimer = 20
+        self.reduceTimer = 5
         self.adjustAmount = 2
         self.avgAdjustThreshold = Decimal(1.25)
         self.reportClipping = True
@@ -34,12 +34,12 @@ class MySketch(Sketch):
         self.minred = 0 
         self.mingreen = 0
         self.minblue = 0
-
+            #these maximums can be changed without altering the hard RGB color limit, which is 255.
         self.maxred = 255
         self.maxgreen = 255
         self.maxblue = 255
 
-        self.red = 0 # beyond this point are no more changable values
+        self.red = 0 # beyond this point are no more changeable values.
         self.green = 0
         self.blue = 0
         self.frame_rate = 60
@@ -181,18 +181,18 @@ class MySketch(Sketch):
             b = self.blue
 
         adjustChange = "=0"
-        if isClipping:
+        if isClipping and self.autoAdjust:
             self.reduction += self.adjustAmount
             adjustChange = f"+{self.adjustAmount}"
             self.activeReduceTimer = self.reduceTimer
 
-        if self.activeReduceTimer == 0 and self.avgClrAdj <= self.avgAdjustThreshold and not (self.reduction - self.adjustAmount) < 1:
+        if self.activeReduceTimer == 0 and self.avgClrAdj <= self.avgAdjustThreshold and self.autoAdjust and not (self.reduction - self.adjustAmount) < 1:
             self.reduction -= self.adjustAmount
             adjustChange = f"-{self.adjustAmount}"
             self.activeReduceTimer = self.reduceTimer
         
         level = "#"
-        level = level + ("#" * int(coloradj * 4))
+        level = level + ("#" * int(coloradj * 4)) +("|" * 99)
         
         self.stdscr.clear()
         self.stdscr.addstr(0, 0, "" +
