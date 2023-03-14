@@ -32,7 +32,7 @@ class MySketch(Sketch):
         self.baseblue = 1
 
         self.minred = 0 
-        self.mingreen = 15
+        self.mingreen = 0
         self.minblue = 0
 
         self.maxred = 255
@@ -42,7 +42,7 @@ class MySketch(Sketch):
         self.red = 0 # beyond this point are no more changable values
         self.green = 0
         self.blue = 0
-        self.frame_rate = 30
+        self.frame_rate = 60
         self.activeReduceTimer = 0
         self.avgClrAdjCalculator = []
         for i in range(1,self.averagingSampleCount):
@@ -192,7 +192,7 @@ class MySketch(Sketch):
             self.activeReduceTimer = self.reduceTimer
         
         level = "#"
-        level = level + ("#" * int(coloradj * 8))
+        level = level + ("#" * int(coloradj * 4))
         
         self.stdscr.clear()
         self.stdscr.addstr(0, 0, "" +
@@ -206,7 +206,7 @@ class MySketch(Sketch):
             f"Adjustment Change: {adjustChange}\n" +
             f"Adjustment Timer: {self.activeReduceTimer}\n" +
            (f"COLOR DISABLED\n" if self.avgVLV < self.colorDisableThreshhold else "COLOR ENABLED\n") +
-            f"LEVEL: {level[:200]}\n")
+            f"LEVEL: {level[:100]}\n")
         self.stdscr.refresh()
 
     
