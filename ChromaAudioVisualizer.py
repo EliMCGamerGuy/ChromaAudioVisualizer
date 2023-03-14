@@ -42,7 +42,7 @@ class MySketch(Sketch):
         self.red = 0 # beyond this point are no more changeable values.
         self.green = 0
         self.blue = 0
-        self.frame_rate = 60
+        self.frame_rate = 30
         self.activeReduceTimer = 0
         self.avgClrAdjCalculator = []
         for i in range(1,self.averagingSampleCount):
