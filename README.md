@@ -15,8 +15,7 @@ The Environment:
       Modules:
         Pychroma
         Pyaudio
-        Audioop
-        windows-curses
+        Windows-curses
 ```   
 The way it looks for loopback devices is it loops through all recording devices, searching for devices that contain "stereo mix", "loopback", or "voicemeeter aux output" in it's title. The way it's set up is it takes the first one of these three that it finds first, so what I do is disable all loopback devices that I don't want it to use. In my current case, this happens to be all but Voicemeeter Banana's second virtual microphone(which I'm piping my sound output through, of course).
 
