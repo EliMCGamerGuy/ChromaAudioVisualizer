@@ -1,3 +1,3 @@
 call conda activate ChromaVis
-python ChromaMouseAudio.py
+python ChromaAudioVisualizer.py
 call conda deactivate
